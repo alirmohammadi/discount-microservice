@@ -4,12 +4,9 @@
        return false;
    }
    // Custom routing logic
-   switch ($_SERVER['REQUEST_URI']) {
-       case '/calculate-discount':
-           require __DIR__ . '/calculate_discount.php';
-           break;
-       default:
-           http_response_code(404);
-           echo 'Not Found';
-           break;
+   if ($_SERVER[ 'REQUEST_URI' ] === '/calculate-discount') {
+       require __DIR__.'/calculate_discount.php';
+   } else {
+       http_response_code(404);
+       echo 'Not Found';
    }

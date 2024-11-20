@@ -4,17 +4,8 @@ namespace App\Domains;
 
 class Customer
 {
-
-    public int $id;
-    public string $name;
-    public float $totalSpent;
-
-    public function __construct(int $id, string $name, float $totalSpent)
-    {
-        $this->id = $id;
-        $this->name = $name;
-        $this->totalSpent = $totalSpent;
-    }
+    public function __construct(public int $id,public string $name,public float $totalSpent)
+    {}
 
     public function getId(): int
     {

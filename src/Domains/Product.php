@@ -2,9 +2,6 @@
 
 namespace App\Domains;
 
-use App\ValueObjects\Category;
-use App\ValueObjects\Price;
-
 class Product
 {
 
